@@ -1,18 +1,80 @@
 # EX-10 APPLICATION USING TCP SOCKETS - FILE TRANSFER PROGRAM
 
-DATE :
+## DATE : 08/05/2023
 
-AIM :
+## AIM :
 
+To write a python program for creating File Transfer using TCP Sockets Links.
 
-ALGORITHM :
+## ALGORITHM :
 
+1. Import the necessary python modules.
+2. Create a socket connection using socket module.
+3. Send the message to write into the file to the client file.
+4. Open the file and then send it to the client in byte format.
+5. In the client side receive the file from server and then write the content into it
 
-PROGRAM :
+## PROGRAM :
+### Client
+```python
+Developed by : Tejusve Kabeer.F
+Register no : 212222100054
 
+import socket
+s = socket.socket()
+host = socket.gethostname()
+port = 60000
+s.connect((host, port))
+s.send("Hello server!".encode())
+with open('received_file', 'wb') as f:
+ while True:
+ print('receiving data...')
+ data = s.recv(1024)
+ print('data=%s', (data))
+ if not data:
+ break
+ f.write(data)
+f.close()
+print('Successfully get the file')
+s.close()
+print('connection closed')
+```
+### Server
+```python
+Developed by : Tejusve Kabeer.F
+Register no : 212222100054
 
-OUTPUT :
+import socket
+port = 60000
+s = socket.socket()
+host = socket.gethostname()
+s.bind((host, port))
+s.listen(5)
+while True:
+ conn, addr = s.accept()
+ data = conn.recv(1024)
+ print('Server received', repr(data))
+ filename='mytext.txt'
+ f = open(filename,'rb')
+ l = f.read(1024)
+ while (l):
+ conn.send(l)
+ print('Sent ',repr(l))
+ l = f.read(1024)
+ f.close()
+ print('Done sending')
+ conn.send('Thank you for connecting'.encode())
+ conn.close()
+```
 
+## OUTPUT :
 
+### clientoutput :
+![co](https://github.com/Reebak04/EX-10/assets/118364993/2ec4c710-68c4-4531-bb8d-41e897178a11)
 
-RESULT :
+### serveroutput :
+![so](https://github.com/Reebak04/EX-10/assets/118364993/f0e665c2-1098-4f51-b979-36eb9a89d088)
+
+## RESULT :
+Thus, the python program for creating File Transfer using TCP Sockets Links was
+successfully created and executed.
