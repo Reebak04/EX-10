@@ -70,10 +70,10 @@ while True:
 ## OUTPUT :
 
 ### clientoutput :
-![co](https://github.com/Reebak04/EX-10/assets/118364993/2ec4c710-68c4-4531-bb8d-41e897178a11)
+![7co](https://github.com/Reebak04/EX-10/assets/118364993/40909ba7-35ca-4167-ae74-036ebaa8eeaf)
 
 ### serveroutput :
-![so](https://github.com/Reebak04/EX-10/assets/118364993/f0e665c2-1098-4f51-b979-36eb9a89d088)
+![7so](https://github.com/Reebak04/EX-10/assets/118364993/1dfedd13-093d-4af6-99ac-a2cf89d3eb2f)
 
 ## RESULT :
 Thus, the python program for creating File Transfer using TCP Sockets Links was
