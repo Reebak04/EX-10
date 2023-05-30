@@ -3,11 +3,9 @@
 ## DATE : 08/05/2023
 
 ## AIM :
-
 To write a python program for creating File Transfer using TCP Sockets Links.
 
 ## ALGORITHM :
-
 1. Import the necessary python modules.
 2. Create a socket connection using socket module.
 3. Send the message to write into the file to the client file.
@@ -66,12 +64,9 @@ while True:
  conn.send('Thank you for connecting'.encode())
  conn.close()
 ```
-
 ## OUTPUT :
-
 ### clientoutput :
 ![7co](https://github.com/Reebak04/EX-10/assets/118364993/40909ba7-35ca-4167-ae74-036ebaa8eeaf)
-
 ### serveroutput :
 ![7so](https://github.com/Reebak04/EX-10/assets/118364993/1dfedd13-093d-4af6-99ac-a2cf89d3eb2f)
 
